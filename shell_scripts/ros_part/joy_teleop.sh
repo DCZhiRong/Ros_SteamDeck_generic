@@ -8,7 +8,7 @@ ros2 launch leo_teleop joy_teleop.launch.xml joy_config_file:=${CONFIG_FILE} &
 LAUNCH_BACK_PID=$!
 
 ## Running image view in rqt
-rqt_image_view &
+rqt -s image_view &
 RQT_BACK_PID=$!
 
 ## Waiting for RQT close
