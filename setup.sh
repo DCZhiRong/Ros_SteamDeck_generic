@@ -35,7 +35,7 @@ while true; do
 done
 
 SELECTED_CONTAINER="${CONTAINERS_NAMES[$((choice-1))]}"
-echo "Your selection: $SELECTED_CONTAINER"
+echo "Selected container: $SELECTED_CONTAINER"
 
 ############################################
 for file in $FILES
