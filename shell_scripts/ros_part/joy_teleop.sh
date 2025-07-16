@@ -3,7 +3,7 @@ ROS_DISTRO=$(ls /opt/ros)
 source /opt/ros/${ROS_DISTRO}/setup.bash
 
 ## Launching teleoperation nodes with custom config for steam deck axes mapping
-CONFIG_FILE=@@REPO_PATH@@/configs/steam_deck_config.yaml
+CONFIG_FILE=@@REPO_PATH@@/configs/steamdeck_config.yaml
 ros2 launch leo_teleop joy_teleop.launch.xml joy_config_file:=${CONFIG_FILE} &
 LAUNCH_BACK_PID=$!
 
