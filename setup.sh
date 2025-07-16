@@ -38,19 +38,17 @@ SELECTED_CONTAINER="${CONTAINERS_NAMES[$((choice-1))]}"
 echo "Selected container: $SELECTED_CONTAINER"
 
 ############################################
-for file in $FILES
-do
+for file in $FILES; do
     sed -i -e "s|@@REPO_PATH@@|$SCRIPT_PATH|g" $file
     sed -i -e "s|@@CONTAINER_NAME@@|$SELECTED_CONTAINER|g" $file
 done
- 
-cp ${SCRIPT_PATH}/desktop_apps/*.desktop ~/Desktop
 
-SCRIPTS=$(find . -name "*.sh")
-for script in $SCRIPTS
-do
+SCRIPTS=$(find . -name "*.sh" ! -name "*setup*")
+for script in $SCRIPTS ${SCRIPT_PATH}/desktop_apps/*.desktop ;do
     chmod +x $script
 done
+
+cp ${SCRIPT_PATH}/desktop_apps/*.desktop ~/Desktop
 
 ############################################
 echo "Installing basic ros packages"
