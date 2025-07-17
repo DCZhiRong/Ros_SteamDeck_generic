@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Virtual Keyboard
-Exec='@@REPO_PATH@@/shell_scripts/desktop_part/florence.sh'
-Icon=@@REPO_PATH@@/icons/keyboard.ico
-Terminal=False
