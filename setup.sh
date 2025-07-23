@@ -44,7 +44,7 @@ for file in $FILES; do
 done
 
 SCRIPTS=$(find . -name "*.sh" ! -name "*setup*")
-for script in $SCRIPTS ${SCRIPT_PATH}/desktop_apps/*.desktop ;do
+for script in $SCRIPTS ${SCRIPT_PATH}/desktop_apps/*.desktop; do
     chmod +x $script
 done
 
